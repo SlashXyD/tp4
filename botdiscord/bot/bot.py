@@ -1,5 +1,5 @@
 import discord
-
+###
 
 class MyBot(discord.ext.commands.Cog, name='MyBot module'):
     def __init__(self, bot):
