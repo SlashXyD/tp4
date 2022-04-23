@@ -7,7 +7,7 @@ from command.command_err import CommandErrHandler
 def main():
     intents= discord.Intents.default()
     intents.members= True
-    token= "OTU5MzQ5MjI2MDc1MjA5NzI4.Ykallw.oHUmvZffuCs16NmvOGtkW-dW70k"
+    token= "OTU5MzQ5MjI2MDc1MjA5NzI4.Ykallw.xpu-xFkfd9CNhYv5hlH5k71BS_g"
 
 
     bot = BotOnReady(command_prefix='/', intents=intents)
