@@ -2,13 +2,18 @@ import discord
 from command.CommandBot import BotOnReady
 from bot.bot import MyBot
 from command.command_err import CommandErrHandler
+import json
+
+
 
 
 def main():
     intents= discord.Intents.default()
     intents.members= True
-    token= "OTU5MzQ5MjI2MDc1MjA5NzI4.Ykallw.xpu-xFkfd9CNhYv5hlH5k71BS_g"
 
+    ##         Mettre le token de son bot ici           ##
+    token= "<votre token>"
+    ######################################################
 
     bot = BotOnReady(command_prefix='/', intents=intents)
     

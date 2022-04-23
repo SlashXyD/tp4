@@ -1,14 +1,26 @@
+import datetime
+from email import message
 import discord
+from bot import Logger
+from command import CommandBot
 ###
 
 class MyBot(discord.ext.commands.Cog, name='MyBot module'):
     def __init__(self, bot):
         self.bot = bot
 
+    date =datetime.datetime.now()
+    date = date.strftime("%m/%d/%y, :%H:%M:%S")
+    date = str(date)
+
+
     # Réponse à hey par hey
     @discord.ext.commands.command(name="hey")
     async def command_hey(self, ctx):
-        await ctx.send(f'Hey {ctx.author.name}')
+        await ctx.send(f'Hey {ctx.author.name}'.format(message))
+        if message.author == self.user:
+            with open("logs.txt", "a") as L :
+                L.write( self.date +"message"+ message.content)
 
     # Commande Help
     @discord.ext.commands.command(name="aide")
@@ -46,6 +58,26 @@ class MyBot(discord.ext.commands.Cog, name='MyBot module'):
         channel = member.guild.system_channel
         if channel is not None:
             await channel.send(f'{member.mention} join the TestWorld!')
+
+
+    async def log(self, ctx):
+      await ctx.wait_until_ready()
+       
+      while not ctx.is_closed() :
+         try :
+          
+             with open("logs.txt", "a") as L :
+
+               if len(self.Connect) != 0:
+                  L.write("Time :{int(time.time())},connection:{Connect.pop([0])}\n")
+
+               if len(self.messageR) != 0:
+
+                 L.write("Time :{int(time.time())},message:{messageR.pop([0])}\n")
+
+         except Exception as b:
+          
+            print(b)
 
 
 
