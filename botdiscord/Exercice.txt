@@ -1,0 +1,13 @@
+
+    Qu’est-ce qu’un bot ?
+Un bot est une application logicielle programmée pour effectuer certaines tâches.
+Automatisées, ces applications s'exécutent selon leurs instructions, sans nécessité pour un utilisateur humain de les lancer manuellement à chaque fois.
+Les bots imitent ou remplacent bien souvent le comportement des utilisateurs humains.
+Enfin, ils effectuent généralement les tâches répétitives de manière beaucoup plus rapide que ces derniers.
+
+
+    Qu'est ce que le logging. À quoi servent les logs?
+
+
+
+
